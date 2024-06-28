@@ -1,0 +1,16 @@
+#|/bin/bash
+
+
+
+
+echo "informações sistema operacional"
+
+uname -a
+
+cat /etc/os-release 
+
+echo "informações devices"
+
+lspci
+
+
