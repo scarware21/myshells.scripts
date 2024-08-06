@@ -15,11 +15,8 @@ esac
 echo "1)  Atualizar lista de repositorio"
 echo "2)  Remover pacote"
 echo "3)  Instalando programa/pacote"
-echo "4)  Verificando que tem pacote instalado"
-echo "5)  Utilitario compressão / extração de arquivos" 
-echo "6)  verificar sistema"
-
-
+echo "4)  Verificando se tem pacote instalado"
+echo "5) Verificando erros"
 	
 
 		if [[ $UID = 0 ]]; then
