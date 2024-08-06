@@ -15,8 +15,7 @@ esac
 echo "1)  Atualizar lista de repositorio"
 echo "2)  Remover pacote"
 echo "3)  Instalando programa/pacote"
-echo "4)  Verificando se tem pacote instalado"
-echo "5) Verificando erros"
+echo "4)  Verificando memória"
 	
 
 		if [[ $UID = 0 ]]; then
@@ -50,9 +49,15 @@ case $opc in
 		else
 			$gpkp -Rs  $pacote
 		fi
+  	;;
+   	4) echo "quantidade de memoria"
+    		free -h
+    	
+   	
 	;;
 	*) echo "opcao invalida"
 	exit 1
 	;;
 esac
+
 
