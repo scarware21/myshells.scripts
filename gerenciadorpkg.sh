@@ -12,9 +12,21 @@ esac
 
 
 ######MENU
-echo "1) atualizar lista de repositorio"
-echo "2) Remover pacote"
-echo "3)  instalando programa/pacote"
+echo "1)  Atualizar lista de repositorio"
+echo "2)  Remover pacote"
+echo "3)  Instalando programa/pacote"
+echo "4)  Verificando que tem pacote instalado"
+echo "5)  Utilitario compressão / extração de arquivos" 
+echo "6)  verificar sistema"
+
+
+	
+
+		if [[ $UID = 0 ]]; then
+  			echo "precisa de root"
+	
+
+
 read -p "Qual opcao: " opc
 
 case $opc in
