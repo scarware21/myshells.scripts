@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# Testes do programa
+
+#============================================================================
+#Usuário tem internet?
+if ! wget -q --spider www.google.comm; then 
+	echo "Necessita de internet para continuar..."
+	exit 1
+fi
+
+#Usuário é root?
+[[ "$UID" -ne "0" ]] && { echo "Necessita de root" ; exit 1 ;}
+#============================================================================
+
+
+#apt update falhou?bye
+if apt update; then #atualizando lista de pacote
+	echo "Lista de pacote foram atualizadas.[OK]"
+else
+	echo "apte update falhou! saindo da atualização.[erro]"
+	exit 1
+fi
+#apt upgrade fahou? bye
+if apt -y upgrade; then
+	echo "updgrade de pacotes foram atualizados com sucesso. [OK]"
+else
+	echo "upgrade de pacotes falhou!! Saindo do programa! [erro]"
+fi
+
+if apt clean; then
+	echo "Arquivos desnecessários retirados. [OK]"
+else
+	echo "apt clean deu pau...[erro]"
+fi

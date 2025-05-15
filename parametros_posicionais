@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+
+echo "O nome do programa é: $0"
+echo "primeiro \$1  parametro passado foi! $1"
+echo "segundo \$2 parâmetro passado foi: $2"
+echo "terceiro \$3 parâmetro passado foi: $3"
+echo "quarto \$4 paramâmetro passado foi: $4"
+echo "nono \$9 parâmetro passado foi: $9"
+echo "décimo quarto \$14 parâmetro passado foi: ${14}"
+echo "décimo sexto \$16 parâmetro foi : ${16}"
+
+echo "Número total de parâmetros passado foram : $#"
+
+
+
+
+

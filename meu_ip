@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+date
+sleep 4s
+#Variaveis do programa============================
+servidor1="icanhazipp.com"
+servidor2="ifconfig.me"
+#=================================================
+
+#TESTES INICIAIS===================================
+echo "Verificando se há conexão com internet..."
+sleep 6s
+if ! wget -q --spider ww.google.com.br; then
+	echo "necessita de internet"
+exit 1
+fi
+#=================================================
+
+exec_=$(if ! curl -s "$servidor1"; then curl -s "$servidor2"; fi)
+
+echo "o seu ip externo é: $exec_"
+

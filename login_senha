@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+date
+# Váriaveis do programa=======================#
+user="chuerta"
+password="3052"
+
+#read -p "Login: " _login
+#read -s -p "password: "   _pass
+
+#if [[ "$_login" = "$user" ]] && [[ "$_pass" -eq "$password" ]]; then
+
+#	echo -e  "\nLogado.... Verificando ambiente de trabalho"
+#	sleep 2s
+#else
+#	echo "Login ou Senha inválidos.."
+#	exit 1
+#fi
+
+echo \
+"
+=====================================
+====Bem vindo no Sistema $user=====
+1) Abrir navegador Firefox
+2) Abrir editor Sublime
+3) Abrir editor Gedit
+4) Sair
+====================================
+"
+
+
+read -p "Selecione uma opção: " opc
+
+case $opc in
+	1) [[ $(type -P firefox) ]] || { echo "Firefox não existe"; exit 1 ;}
+		firefox & ;;
+	2) [[ $(type -P subl) ]] || { echo "Sublime não existe"; exit 1 ;}
+		subl &    ;;
+	3) [[ $(type -P gedit) ]] || { echo "Gedit não existe"; exit 1 ;}
+		gedit &   ;;
+	4)echo "Voce saiu do sistema"  ;;
+	*)echo "Não existe essa opção aqui!!"
+esac
+

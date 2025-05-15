@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+#--> Raciocínio:
+#Preciso criar um menus com os seguintes comandos
+#Firefox
+#Sublime
+#Gedit
+
+echo "#==========================#"
+echo "1) Abrir o Firefox"
+echo "2) Abrir Nano"
+echo "3) Abrir o Gedit"
+echo "4) Sair do programa"
+echo "#=========================#"
+read -p "Selecione umas das opções: " opc
+
+
+if [[ "$opc" -eq "1" ]]; then
+	firefox &
+
+elif [[ "$opc" -eq "2" ]]; then
+	subl &
+
+elif [[ "$opc" -eq "3" ]]; then
+	gedit  &
+
+elif [[ "$opc" -eq "4" ]]; then
+	echo "Saindo do programa"
+	exit 0
+ else
+	echo "Não existe essa opção"
+fi
+
+
