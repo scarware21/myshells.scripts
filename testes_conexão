@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+
+read -p "Digite o Endereço de um Site : " link
+
+for sites in "$link"; do
+
+exec_=$(ping -c2 "$link")
+
+echo "Retorno de testes do ping foi : $exec_"
+
+done
