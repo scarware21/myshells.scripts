@@ -2,7 +2,8 @@
 
 ##############################################################################################
 ##############################################################################################
-#Descrição do programa : Usuário entra com um link de site / IP e retorna o status com o comando PING.
+#Descrição do programa : Usuário entra com um link de site / IP e retorna o status com o 
+#comando PING.
 #Autor : Carlos Huerta
 #Versão : 1.0
 #Changelog : -
